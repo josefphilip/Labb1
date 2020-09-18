@@ -57,7 +57,8 @@ namespace Labb1
                     }
                 }
             }
-            sum = sum + long.Parse(textSum);
+            long.TryParse(textSum, out long lastSum);
+            sum = sum + lastSum;
             Console.Write($"Summan av din sträng som markerats är: {sum}");
             Console.ReadKey(true);
         }
